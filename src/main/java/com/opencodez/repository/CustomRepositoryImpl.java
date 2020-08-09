@@ -1,4 +1,4 @@
-package com.opencodez.repo;
+package com.opencodez.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
 import com.mongodb.client.result.UpdateResult;
-import com.opencodez.domain.Users;
+import com.opencodez.model.Users;
 
 @Component
 public class CustomRepositoryImpl implements CustomRepository {

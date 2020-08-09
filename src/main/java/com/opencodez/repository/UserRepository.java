@@ -1,15 +1,17 @@
-package com.opencodez.repo;
+package com.opencodez.repository;
 
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.opencodez.domain.Users;
+import com.opencodez.model.Users;
 
 public interface UserRepository extends MongoRepository<Users, String> {
 	
 	Users findFirstByName(String name);
+
+
 	
     @Query("{address:'?0'}")
     List<Users> findCustomByAddress(String address);
